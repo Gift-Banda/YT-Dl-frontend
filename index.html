@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <!--
+      Need a visual blank slate?
+      Remove all code in `styles.css`!
+    -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <main class=".container-fluid">
+      <h1>Youtube Downloader</h1>
+      <form id="form" sub>
+        <div class="input-group main-container">
+          <div class="select-container">
+            <select
+              class="form-select"
+              id="quality-select"
+              aria-label="Default select example"
+              name="format"
+              id="format"
+            >
+              <optgroup label="Video">
+                <option>mp4</option>
+                <option>mov</option>
+                <option>avi</option>
+                <option>webm</option>
+                <option>mkv</option>
+                <option>flv</option>
+              </optgroup>
+              <optgroup label="Audio">
+                <option>mp3</option>
+                <option>wav</option>
+                <option>wmv</option>
+                <option>ogg</option>
+                <option>aiff</option>
+              </optgroup>
+            </select>
+
+            <select
+              class="form-select"
+              id="format-select"
+              aria-label="Default select example"
+              id="quality"
+            >
+              <optgroup label="Audio and video">
+                <option>Highest quality</option>
+                <option>Lowest quality</option>
+              </optgroup>
+              <optgroup label="Audio only">
+                <option>Highest audio quality</option>
+                <option>Lowest audio quality</option>
+              </optgroup>
+              <optgroup label="Video only">
+                <option>Highest video quality</option>
+                <option>Lowest video quality</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="text-input-container">
+            <input
+              type="text"
+              id="yt-link"
+              class="form-control text-input"
+              placeholder="Paste link here..."
+              aria-label="youtube link"
+              aria-describedby="button-addon2"
+            />
+            <input
+              type="submit"
+              value="Download"
+              class="btn btn-outline-secondary"
+              type="button"
+              id="button-addon2"
+            />
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
